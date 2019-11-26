@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block styles %}
+        <link rel="stylesheet" href="{% static 'css/Welcome.css' %}">
+{% endblock %}
+
+{% block content %}
+
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Genres
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="First_Person_Shooter">First Person Shooter</a>
+                    <a href="Role_Playing_Game">Role Playing Game</a>
+                    <a href="Real_Time_Strategy">Real Time Strategy</a>
+                </div>
+            </div>
+            <a href= "{% url 'login' %}" class="log_in">Log in</a>
+            <a href="#sign_up" class="sign_up">Sign up</a>
+        </div>
+        <h1>You are now logged into Videogame website!</h1>
+
+        <h2> Welcome {{ name }} !</h2>
+
+        <h3> Feel free to check out our catalog of video games and remember to sign in at the top!</h3>
+
+{% endblock %}
